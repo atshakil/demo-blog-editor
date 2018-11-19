@@ -1,0 +1,50 @@
+.Dashboard {
+  .section-a {
+    margin-top: 20px;
+
+    .section-wrapper {
+      background-color: #f1f1f1;
+      margin: 0 15px;
+      padding: 0;
+      
+      .name-editor {
+        background-color: white;
+        margin: 0 2px 3px 2px;
+
+        input {
+          border-radius: 0;
+        }
+      }
+    }
+  }
+
+  .section-b {
+    margin-top: 35px;
+  }
+
+  .section-c {
+    margin-top: 25px;
+
+    .buttons {
+      text-align: center;
+
+      button {
+        border: 0;
+        border-radius: 0;
+        min-width: 150px;
+      }
+
+      #submit {
+        background-color: #5cb85c;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .Dashboard {
+    button {
+      width: 100%;
+    }
+  }
+}

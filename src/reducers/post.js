@@ -1,13 +1,16 @@
 import * as types from '../constants/ActionTypes';
+import { TEMPLATE1 } from '../templates/sample.js';
 
 const initialState = {
-  dummyValue: 0
+  image: null,
+  title: '',
+  content: TEMPLATE1
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case types.DUMMY_INCREMENT:
-      return Object.assign({}, state, {dummyValue: state.dummyValue + 1});
+    case types.UPDATE_POST:
+      return Object.assign({}, state, action.data);
     default:
       return state;
   }

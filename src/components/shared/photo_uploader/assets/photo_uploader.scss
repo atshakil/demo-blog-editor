@@ -1,0 +1,28 @@
+.photo-uploader {
+  margin: 2px 2px 0 2px;
+
+  .dropzone {
+    background-color: white;
+    border: 2px dashed #808080;
+    border-radius: 5px;
+    text-align: center;
+
+    img {
+      max-width: 200px;
+      max-height: 200px;
+      padding: 10px 0;
+    }
+
+    .dropzone-hint {
+      padding: 10px 0;
+
+      .hint {
+        justify-content: center;
+      }
+
+      .hint-icon {
+        color: #337ab7;
+      }
+    }
+  }
+}

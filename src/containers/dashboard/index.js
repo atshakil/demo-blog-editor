@@ -5,6 +5,7 @@ import { Container, Row, Col, FormGroup, Input } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FormattedMessage } from 'react-intl';
 import Dropzone from 'react-dropzone';
+import ReactQuill from 'react-quill';
 import { incrementDummyValue } from '../../actions/Dummy';
 import { updatePost } from '../../actions/Post';
 import './assets/dashboard.css';
@@ -61,8 +62,12 @@ export class VisibleDashboard extends Component {
           </Col>
         </Row>
         <Row className='section-b'>
-          <Col className='content-editor'>
-            
+          <Col className='content-editor-wrapper'>
+            <ReactQuill
+              value={post.content}
+              onChange={e => updatePost({content: e.target.value})}
+              className='content-editor'
+              />
           </Col>
         </Row>
         <Row className='section-c'>

@@ -29,8 +29,14 @@
   }
 
   .section-b {
-    .content-editor {
-
+    .content-editor-wrapper {
+      .content-editor {
+        .ql-editor {
+          min-height: 200px;
+          overflow-y: hidden;
+          resize: vertical;
+        }
+      }
     }
   }
 

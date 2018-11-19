@@ -9,6 +9,7 @@ import en from 'react-intl/locale-data/en';
 import vi from 'react-intl/locale-data/vi';
 import ja from 'react-intl/locale-data/ja';
 import 'bootstrap/dist/css/bootstrap.css';
+import 'react-quill/dist/quill.snow.css';
 import store from './store';
 import './styles/index.css';
 import App from './containers/app';

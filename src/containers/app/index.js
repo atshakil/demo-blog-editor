@@ -4,6 +4,7 @@ import { IntlProvider } from 'react-intl';
 import { connect } from 'react-redux';
 import Dashboard from '../dashboard';
 import NotFound from '../not_found';
+import Header from '../header';
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
     return (
       <IntlProvider locale={locale} key={locale} messages={translations}>
         <div className='App'>
+          <Header />
           <Switch>
             <Route exact path='/' component={Dashboard} />
             <Route component={NotFound} />

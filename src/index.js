@@ -8,6 +8,7 @@ import { addLocaleData } from 'react-intl';
 import en from 'react-intl/locale-data/en';
 import vi from 'react-intl/locale-data/vi';
 import ja from 'react-intl/locale-data/ja';
+import 'bootstrap/dist/css/bootstrap.css';
 import store from './store';
 import './styles/index.css';
 import App from './containers/app';

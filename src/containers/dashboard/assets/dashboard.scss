@@ -35,6 +35,10 @@
           min-height: 200px;
           overflow-y: hidden;
           resize: vertical;
+
+          iframe {
+            pointer-events: none;
+          }
         }
       }
     }

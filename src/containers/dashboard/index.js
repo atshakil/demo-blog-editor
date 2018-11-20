@@ -8,12 +8,12 @@ import Dropzone from 'react-dropzone';
 import ReactQuill, { Quill } from 'react-quill';
 import { ImageDrop } from 'quill-image-drop-module';
 import ImageResize from 'vendor/quill-image-resize-module/ImageResize';
+import VideoResize from 'vendor/quill-video-resize-module/VideoResize';
 import { incrementDummyValue } from '../../actions/Dummy';
 import { updatePost } from '../../actions/Post';
 import './assets/dashboard.css';
 
 Quill.register('modules/imageDrop', ImageDrop);
-Quill.register('modules/imageResize', ImageResize);
 
 export class VisibleDashboard extends Component {
   onDropAccepted(files) {
@@ -75,6 +75,9 @@ export class VisibleDashboard extends Component {
                 imageResize: {
                   modules: ['Resize', 'DisplaySize']
                 },
+                videoResize: {
+                  modules: ['Resize', 'DisplaySize']
+                },
                 toolbar: [
                   [{ 'header': 1 }, { 'header': 2 }],
                   [{ 'font': [] }],
@@ -103,15 +106,3 @@ const mapStateToProps = state => ({
 });
 
 export default withRouter(connect(mapStateToProps, { updatePost })(VisibleDashboard));
-
-
-
-
-        {/* <header className='App-header'>
-          <h1 className='App-title'><FormattedMessage id='dashboard.title' /></h1>
-        </header>
-        <p className='App-body'>
-          Dummy Body
-        </p>
-        ||{dummyValue}||
-        <button onClick={e => incrementDummyValue()}>Increment</button> */}

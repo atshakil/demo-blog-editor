@@ -1,3 +1,4 @@
+import { toast } from 'react-toastify';
 import * as types from '../constants/ActionTypes';
 
 export const incrementDummyValue = () => ({
@@ -28,7 +29,7 @@ export const commitPost = post => dispatch => {
   formData.append('title', post.title);
   formData.append('content', post.content);
 
-  if(!apiServerUrl) return console.log('API server is not configured!'); // notify error
+  if(!apiServerUrl) return toast.error('API server is not configured!'); // notify error
 
   fetch(apiServerUrl, {
     method: 'POST',

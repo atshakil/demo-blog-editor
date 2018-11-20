@@ -9,7 +9,7 @@ class VisibleLogin extends Component {
     const { formatMessage } = this.props.intl;
     return (
       <div className="VisibleHeader">
-        Dummy
+        {/* Dummy */}
       </div>
     );
   }

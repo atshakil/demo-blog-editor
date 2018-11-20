@@ -1,19 +1,21 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { Container, Row, Col, FormGroup, Input } from 'reactstrap';
+import { Container, Row, Col, FormGroup, Input, Button } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FormattedMessage } from 'react-intl';
 import Dropzone from 'react-dropzone';
-import ReactQuill from 'react-quill';
+import ReactQuill, { Quill } from 'react-quill';
+import { ImageDrop } from 'quill-image-drop-module';
 import { incrementDummyValue } from '../../actions/Dummy';
 import { updatePost } from '../../actions/Post';
 import './assets/dashboard.css';
 
+Quill.register('modules/imageDrop', ImageDrop);
+
+
 export class VisibleDashboard extends Component {
   onDropAccepted(files) {
-    // debugger;
-    // get data, and put in store
     const
       { post, updatePost } = this.props,
       image = files[0];
@@ -65,13 +67,26 @@ export class VisibleDashboard extends Component {
           <Col className='content-editor-wrapper'>
             <ReactQuill
               value={post.content}
-              onChange={e => updatePost({content: e.target.value})}
+              onChange={content => updatePost({content})}
               className='content-editor'
+              modules={{
+                imageDrop: true,
+                toolbar: [
+                  [{ 'header': 1 }, { 'header': 2 }],
+                  [{ 'font': [] }],
+                  [{ 'size': ['small', false, 'large', 'huge'] }],
+                  ['bold', 'italic', 'underline', 'strike', 'blockquote'],
+                  [{ 'list': 'ordered'}, { 'list': 'bullet' }, { 'indent': '-1'}, { 'indent': '+1' }],
+                  ['link', 'image', 'video'],
+                  ['clean']
+                ]
+              }}
               />
           </Col>
         </Row>
         <Row className='section-c'>
           <Col className='submit-button'>
+            <Button color='success'>Submit</Button>
           </Col>
         </Row>
       </Container>

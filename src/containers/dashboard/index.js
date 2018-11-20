@@ -7,12 +7,13 @@ import { FormattedMessage } from 'react-intl';
 import Dropzone from 'react-dropzone';
 import ReactQuill, { Quill } from 'react-quill';
 import { ImageDrop } from 'quill-image-drop-module';
+import ImageResize from 'vendor/quill-image-resize-module/ImageResize';
 import { incrementDummyValue } from '../../actions/Dummy';
 import { updatePost } from '../../actions/Post';
 import './assets/dashboard.css';
 
 Quill.register('modules/imageDrop', ImageDrop);
-
+Quill.register('modules/imageResize', ImageResize);
 
 export class VisibleDashboard extends Component {
   onDropAccepted(files) {
@@ -71,6 +72,9 @@ export class VisibleDashboard extends Component {
               className='content-editor'
               modules={{
                 imageDrop: true,
+                imageResize: {
+                  modules: ['Resize', 'DisplaySize']
+                },
                 toolbar: [
                   [{ 'header': 1 }, { 'header': 2 }],
                   [{ 'font': [] }],

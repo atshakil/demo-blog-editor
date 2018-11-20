@@ -10,7 +10,7 @@ import { ImageDrop } from 'quill-image-drop-module';
 import ImageResize from 'vendor/quill-image-resize-module/ImageResize';
 import VideoResize from 'vendor/quill-video-resize-module/VideoResize';
 import { incrementDummyValue } from '../../actions/Dummy';
-import { updatePost } from '../../actions/Post';
+import { updatePost, commitPost } from '../../actions/Post';
 import './assets/dashboard.css';
 
 Quill.register('modules/imageDrop', ImageDrop);
@@ -36,7 +36,7 @@ export class VisibleDashboard extends Component {
 
   render() {
     const
-      { post, updatePost } = this.props,
+      { post, updatePost, commitPost } = this.props,
       { image } = post;
 
     return (
@@ -93,7 +93,7 @@ export class VisibleDashboard extends Component {
         </Row>
         <Row className='section-c'>
           <Col className='submit-button'>
-            <Button color='success'>Submit</Button>
+            <Button color='success' onClick={e => commitPost(post)}>Submit</Button>
           </Col>
         </Row>
       </Container>
@@ -105,4 +105,4 @@ const mapStateToProps = state => ({
   post: state.post
 });
 
-export default withRouter(connect(mapStateToProps, { updatePost })(VisibleDashboard));
+export default withRouter(connect(mapStateToProps, { updatePost, commitPost })(VisibleDashboard));

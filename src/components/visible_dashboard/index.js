@@ -19,7 +19,11 @@ export default class VisibleDashboard extends Component {
           <Col className='section-wrapper'>
             <PhotoUploader photo={post.image} onDrop={updatePost} />
             <Row className='name-editor'>
-              <Input type='text' value={post.title} onChange={e => updatePost({title: e.target.value})} />
+              <Input
+                type='text'
+                placeholder='Điển tên món'
+                value={post.title}
+                onChange={e => updatePost({title: e.target.value})} />
             </Row>
           </Col>
         </Row>

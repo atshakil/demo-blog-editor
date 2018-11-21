@@ -21,14 +21,13 @@ export default class PhotoUploader extends Component {
         size: image.size
       }
     });
-    console.log('Drop accepted');
   }
-
+  Điền
   render() {
-    const { photo } = this.props;
+    const { photo, className } = this.props;
 
     return (
-      <Row className='photo-uploader'>
+      <Row className={className ? className : 'photo-uploader'}>
         <Dropzone
           className='dropzone w-100'
           accept='image/*'
@@ -39,7 +38,7 @@ export default class PhotoUploader extends Component {
             :
             <Col className='dropzone-hint'>
               <Row className='hint hint-icon'><FontAwesomeIcon icon='camera-retro' size='4x' /></Row>
-              <Row className='hint'>Drop here!</Row>
+              <Row className='hint'>Úp hình thành phẩm</Row>
             </Col>
           }
         </Dropzone>

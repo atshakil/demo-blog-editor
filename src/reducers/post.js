@@ -2,7 +2,7 @@ import * as types from '../constants/ActionTypes';
 
 const initialState = {
   image: null,
-  title: 'cat',
+  title: '',
   content: ''
 };
 

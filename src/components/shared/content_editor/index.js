@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
 import { Col } from 'reactstrap';
 import ReactQuill from 'react-quill';
+import classNames from 'classnames';
 import './assets/content_editor.css';
 
 export default class ContentEditor extends Component {
   render() {
-    const
-      { content, onChange, placeholder } = this.props;
-
-    // if(!post) return null;
+    const { content, onChange, placeholder, className } = this.props;
 
     return (
-      <Col className='content-editor-wrapper'>
+      <Col className={classNames('content-editor-wrapper', className ? className : null)}>
         <ReactQuill
           value={content}
           onChange={changedContent => onChange ? onChange(changedContent) : null}

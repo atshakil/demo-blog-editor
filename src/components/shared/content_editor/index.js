@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Col } from 'reactstrap';
-import ReactQuill, { Quill } from 'react-quill';
+import ReactQuill from 'react-quill';
 import './assets/content_editor.css';
 
 export default class ContentEditor extends Component {
@@ -17,7 +17,7 @@ export default class ContentEditor extends Component {
           onChange={changedContent => onChange ? onChange(changedContent) : null}
           className='content-editor'
           modules={{
-            imageDrop: true,
+            // imageDrop: true,
             imageResize: {
               modules: ['Resize', 'DisplaySize']
             },

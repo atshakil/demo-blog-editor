@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import { Container, Row, Col, FormGroup, Input, Button } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FormattedMessage } from 'react-intl';
-
 import PhotoUploader from '../shared/photo_uploader';
-import ContentEditor from './_content_editor';
+import ContentEditor from '../shared/content_editor';
 import './assets/dashboard.css';
 
 export default class VisibleDashboard extends Component {

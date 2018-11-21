@@ -6,7 +6,7 @@ import './assets/content_editor.css';
 export default class ContentEditor extends Component {
   render() {
     const
-      { content, onChange } = this.props;
+      { content, onChange, placeholder } = this.props;
 
     // if(!post) return null;
 
@@ -16,8 +16,9 @@ export default class ContentEditor extends Component {
           value={content}
           onChange={changedContent => onChange ? onChange(changedContent) : null}
           className='content-editor'
+          placeholder={placeholder ? placeholder : ''}
           modules={{
-            // imageDrop: true,
+            imageDrop: true,
             imageResize: {
               modules: ['Resize', 'DisplaySize']
             },

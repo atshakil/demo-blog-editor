@@ -16,7 +16,7 @@ export default class VisibleDashboard extends Component {
     return (
       <Container className='Dashboard'>
         <Row className='section-a'>
-          <Col className=''>
+          <Col className='section-wrapper'>
             <PhotoUploader photo={post.image} onDrop={updatePost} />
             <Row className='name-editor'>
               <Input type='text' value={post.title} onChange={e => updatePost({title: e.target.value})} />
@@ -24,11 +24,14 @@ export default class VisibleDashboard extends Component {
           </Col>
         </Row>
         <Row className='section-b'>
-          <ContentEditor post={post.content} onChange={content => updatePost({content})} />
+          <ContentEditor
+            post={post.content}
+            onChange={content => updatePost({content})}
+            placeholder={'Enter news content here...'} />
         </Row>
         <Row className='section-c'>
-          <Col className='submit-button'>
-            <Button color='success' onClick={e => commitPost(post)}>Submit</Button>
+          <Col className='buttons'>
+            <Button id='submit' onClick={e => commitPost(post)}>Submit</Button>
           </Col>
         </Row>
       </Container>

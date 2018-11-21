@@ -38,8 +38,8 @@ export default class PhotoUploader extends Component {
             <img src={photo.content} className='preview' />
             :
             <Col className='dropzone-hint'>
-              <Row><FontAwesomeIcon icon='camera-retro' size='4x' /></Row>
-              <Row>Drop here!</Row>
+              <Row className='hint hint-icon'><FontAwesomeIcon icon='camera-retro' size='4x' /></Row>
+              <Row className='hint'>Drop here!</Row>
             </Col>
           }
         </Dropzone>

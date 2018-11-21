@@ -1,19 +1,21 @@
 .photo-uploader {
-  background-color: #d0d0d0;
+  margin: 2px 2px 0 2px;
 
   .dropzone {
-    // position: relative;
-    // padding: 10px 0;
-    border-width: 2px;
-    border-style: dashed;
+    background-color: white;
+    border: 2px dashed #808080;
     border-radius: 5px;
 
-    .preview {
-
-    }
-
     .dropzone-hint {
-      // text-align: center;
+      padding: 10px 0;
+
+      .hint {
+        justify-content: center;
+      }
+
+      .hint-icon {
+        color: #337ab7;
+      }
     }
   }
 }

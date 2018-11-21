@@ -6,7 +6,17 @@ import './assets/content_editor.css';
 
 export default class ContentEditor extends Component {
   render() {
-    const { content, onChange, placeholder, className } = this.props;
+    const
+      { content, onChange, placeholder, className } = this.props,
+      toolbarConfig = [
+        [{ 'header': 1 }, { 'header': 2 }],
+        [{ 'font': [] }],
+        [{ 'size': ['small', false, 'large', 'huge'] }],
+        ['bold', 'italic', 'underline', 'strike', 'blockquote'],
+        [{ 'list': 'ordered'}, { 'list': 'bullet' }, { 'indent': '-1'}, { 'indent': '+1' }],
+        ['link', 'image', 'video'],
+        ['clean']
+      ];
 
     return (
       <Col className={classNames('content-editor-wrapper', className ? className : null)}>
@@ -23,15 +33,7 @@ export default class ContentEditor extends Component {
             videoResize: {
               modules: ['Resize', 'DisplaySize']
             },
-            toolbar: [
-              [{ 'header': 1 }, { 'header': 2 }],
-              [{ 'font': [] }],
-              [{ 'size': ['small', false, 'large', 'huge'] }],
-              ['bold', 'italic', 'underline', 'strike', 'blockquote'],
-              [{ 'list': 'ordered'}, { 'list': 'bullet' }, { 'indent': '-1'}, { 'indent': '+1' }],
-              ['link', 'image', 'video'],
-              ['clean']
-            ]
+            toolbar: toolbarConfig
           }}
           />
       </Col>

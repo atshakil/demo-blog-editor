@@ -23,7 +23,7 @@ exports[`renders without crashing 1`] = `
       className="dropzone-hint col"
     >
       <div
-        className="row"
+        className="hint hint-icon row"
       >
         <svg
           aria-hidden="true"
@@ -43,9 +43,9 @@ exports[`renders without crashing 1`] = `
         </svg>
       </div>
       <div
-        className="row"
+        className="hint row"
       >
-        Drop here!
+        Úp hình thành phẩm
       </div>
     </div>
     <input

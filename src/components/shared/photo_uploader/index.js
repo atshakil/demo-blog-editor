@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'reactstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FormattedMessage } from 'react-intl';
 import Dropzone from 'react-dropzone';
 import './assets/photo_uploader.css';
 

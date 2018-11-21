@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Row, Col, FormGroup, Input, Button } from 'reactstrap';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { FormattedMessage } from 'react-intl';
+import { Container, Row, Col, Input, Button } from 'reactstrap';
 import PhotoUploader from '../shared/photo_uploader';
 import ContentEditor from '../shared/content_editor';
 import './assets/dashboard.css';

@@ -1,29 +1,13 @@
 import { toast } from 'react-toastify';
 import * as types from '../constants/ActionTypes';
 
-export const incrementDummyValue = () => ({
-  type: types.DUMMY_INCREMENT
-});
-
 export const updatePost = data => ({
   type: types.UPDATE_POST,
   data
 });
 
 export const commitPost = post => dispatch => {
-  /**
-   * Process request
-   * 
-   * Demonstration only, precheck (USES DUMMY ENDPOINT):
-   *    - Endpoint exists, procceed to request,
-   *    - Else, shows error notification
-   * 
-   * if success,
-   *    - Success notification
-   * else,
-   *    - Error notification
-   */
-  let apiServerUrl = null;
+  let apiServerUrl = null; // Dummy Endpoint
   const formData = new FormData();
   formData.append('image', post.image && post.image.content);
   formData.append('title', post.title);
@@ -36,9 +20,9 @@ export const commitPost = post => dispatch => {
     body: formData
   })
   .then(response => {
-    // ...
+    // Successful response handler
   })
   .catch(error => {
-    // ...
+    // Error handler
   });
 };

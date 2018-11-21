@@ -6,7 +6,7 @@ import { ToastContainer } from 'react-toastify';
 import Dashboard from '../dashboard';
 import NotFound from '../not_found';
 import Header from '../header';
-import Settings from '../../config/settings';
+import Settings from 'config/settings';
 
 class App extends Component {
   render() {

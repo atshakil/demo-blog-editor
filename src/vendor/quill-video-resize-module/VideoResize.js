@@ -220,7 +220,3 @@ export default class VideoResize {
     })
   }
 }
-
-if (Quill) {
-  Quill.register('modules/videoResize', VideoResize)
-}

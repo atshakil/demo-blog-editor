@@ -1,9 +1,10 @@
 import * as types from '../constants/ActionTypes';
+import { TEMPLATE1 } from '../templates/sample.js';
 
 const initialState = {
   image: null,
   title: '',
-  content: ''
+  content: TEMPLATE1
 };
 
 export default (state = initialState, action) => {

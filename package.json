@@ -35,10 +35,5 @@
     "test-js": "react-scripts test --env=jsdom",
     "test": "npm-run-all build-css test-js",
     "eject": "react-scripts eject"
-  },
-  "jest": {
-    "coveragePathIgnorePatterns": [
-      "<rootDir>/src/vendor/"
-    ]
   }
 }

@@ -7,11 +7,11 @@ import './assets/photo_uploader.css';
 export default class PhotoUploader extends Component {
   onDropAccepted(files) {
     const
-      { post, onDrop } = this.props,
+      { photo, onDrop } = this.props,
       image = files[0];
 
     // Prevent memory leak
-    if(post.image) URL.revokeObjectURL(post.image.content);
+    if(photo) URL.revokeObjectURL(photo.content);
 
     onDrop({
       image: {
@@ -21,7 +21,7 @@ export default class PhotoUploader extends Component {
       }
     });
   }
-  Điền
+
   render() {
     const { photo, className } = this.props;
 
@@ -33,7 +33,7 @@ export default class PhotoUploader extends Component {
           multiple={false}
           onDropAccepted={this.onDropAccepted.bind(this)}>
           {photo ?
-            <img src={photo.content} className='preview' />
+            <img src={photo.content} alt='' className='preview' />
             :
             <Col className='dropzone-hint'>
               <Row className='hint hint-icon'><FontAwesomeIcon icon='camera-retro' size='4x' /></Row>

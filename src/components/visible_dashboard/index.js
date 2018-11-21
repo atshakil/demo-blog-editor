@@ -27,7 +27,7 @@ export default class VisibleDashboard extends Component {
         </Row>
         <Row className='section-b'>
           <ContentEditor
-            post={post.content}
+            content={post.content}
             onChange={content => updatePost({content})}
             placeholder={'Enter news content here...'} />
         </Row>

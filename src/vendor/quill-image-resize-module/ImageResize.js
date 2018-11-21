@@ -189,7 +189,7 @@ export default class ImageResize {
 
     checkImage = (evt) => {
         if (this.img) {
-            if (evt.keyCode == 46 || evt.keyCode == 8) {
+            if (evt.keyCode === 46 || evt.keyCode === 8) {
                 Quill.find(this.img).deleteAt(0);
             }
             this.hide();

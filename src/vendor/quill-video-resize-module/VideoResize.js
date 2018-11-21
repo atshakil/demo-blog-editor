@@ -59,7 +59,7 @@ export default class VideoResize {
 
     this.checkVideo = evt => {
       if (this.vid) {
-        if (evt.keyCode == 46 || evt.keyCode == 8) {
+        if (evt.keyCode === 46 || evt.keyCode === 8) {
           Quill.find(this.vid).deleteAt(0)
         }
         this.hide()

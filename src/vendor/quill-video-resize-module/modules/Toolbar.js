@@ -36,7 +36,7 @@ export class Toolbar extends BaseModule {
           FloatStyle.add(this.vid, 'left')
           MarginStyle.add(this.vid, '0 1em 1em 0')
         },
-        isApplied: () => FloatStyle.value(this.vid) == 'left'
+        isApplied: () => FloatStyle.value(this.vid) === 'left'
       },
       {
         icon: IconAlignCenter,
@@ -45,7 +45,7 @@ export class Toolbar extends BaseModule {
           FloatStyle.remove(this.vid)
           MarginStyle.add(this.vid, 'auto')
         },
-        isApplied: () => MarginStyle.value(this.vid) == 'auto'
+        isApplied: () => MarginStyle.value(this.vid) === 'auto'
       },
       {
         icon: IconAlignRight,
@@ -54,7 +54,7 @@ export class Toolbar extends BaseModule {
           FloatStyle.add(this.vid, 'right')
           MarginStyle.add(this.vid, '0 0 1em 1em')
         },
-        isApplied: () => FloatStyle.value(this.vid) == 'right'
+        isApplied: () => FloatStyle.value(this.vid) === 'right'
       },
     ]
   }
